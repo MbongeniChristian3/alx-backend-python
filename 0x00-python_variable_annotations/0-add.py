@@ -3,6 +3,7 @@
 This module provides an add function to sum two float values.
 """
 
+
 def add(a: float, b: float) -> float:
     """
     Returns the sum of two floats.
