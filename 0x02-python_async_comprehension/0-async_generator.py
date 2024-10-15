@@ -1,4 +1,15 @@
 #!/usr/bin/env python3
+'''
+loops 10 times, each time asynchronously wait 1 second,
+then yield a random number between 0 and 10.
+
+ Parameters:
+    takes no arguments.
+
+  Returns:
+    Union[int, float]: Random delay between 0 and 10.
+'''
+
 import random
 import asyncio
 
