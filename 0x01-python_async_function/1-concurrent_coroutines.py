@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-'''Spawns wait_random n times with the specified max_delay and returns the list of all delays
-    in ascending order.
+'''Spawns wait_random n times with the specified max_delay and
+returns the list of all delays in ascending order.
 
     Parameters:
     n (int): The number of times to spawn wait_random.
