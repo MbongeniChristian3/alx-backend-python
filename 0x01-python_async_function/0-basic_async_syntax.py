@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-'''Waits for a random delay between 0 and max_delay (inclusive) seconds and returns the delay.
+'''Waits for a random delay between 0 and max_delay
+(inclusive) seconds and returns the delay.
 
     Parameters:
     max_delay (int): The maximum delay in seconds. Defaults to 10.
