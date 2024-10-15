@@ -1,26 +1,33 @@
 #!/usr/bin/env python3
+''' Import async_generator from the previous task and then write
+a coroutine called async_comprehension that takes no arguments.
+
+ Parameters:
+    max_delay (int): The maximum delay in seconds. Defaults to 10.
+
+    Returns:
+    return the 10 random numbers.
+
+'''
 import asyncio
 import random
 
 
-# Define the async_generator function to yield random numbers
 async def async_generator():
     """Yield 10 random numbers asynchronously."""
     for _ in range(10):
-        await asyncio.sleep(1)  # Simulate an async operation
-        yield random.random()  # Yield a random float between 0 and 1
+        await asyncio.sleep(1)
+        yield random.random()
 
 
-# Define async_comprehension
 async def async_comprehension():
     """Collect 10 random numbers from async_generator using async comprehension."""
     return [i async for i in async_generator()]
 
 
-# Example of using the async_comprehension
 async def main():
     result = await async_comprehension()
     print(result)
 
-# Run the main function
+
 asyncio.run(main())
