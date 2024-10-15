@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
+'''Waits for a random delay between 0 and max_delay (inclusive) seconds and returns the delay.
 
+    Parameters:
+    max_delay (int): The maximum delay in seconds. Defaults to 10.
+
+    Returns:
+    Union[int, float]: The actual delay in seconds.
+'''
 import asyncio
-from random import uniform
+import random
 
 
 async def wait_random(max_delay: int = 10) -> float:
-    """Asynchronous coroutine that waits for a random delay between 0 and max_delay seconds."""
-    delay = uniform(0, max_delay)  # Get random float between 0 and max_delay
-    await asyncio.sleep(delay)  # Asynchronously wait for that time
-    return delay
+    '''Waits for a random number of seconds.
+    '''
+    wait_time = random.random() * max_delay
+    await asyncio.sleep(wait_time)
+    return wait_time
